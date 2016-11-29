@@ -204,6 +204,10 @@ bindsym XF86AudioPrev exec mpc -h cocytus prev && killall -USR1 i3status
 bindsym XF86Launch8 exec mpc -h cocytus volume -2 && killall -USR1 i3status
 bindsym XF86Launch9 exec mpc -h cocytus volume +2 && killall -USR1 i3status
 
+# Brightness controls
+bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec light -U 10
+
 # volumebeheer
 set $mode_vol Volume control: (+) increase volume (-) decrease volume (*) Mute
 mode "$mode_vol" {

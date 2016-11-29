@@ -29,6 +29,7 @@ import sys
 import os
 import re
 import json
+import socket
 
 
 def get_governor():
@@ -107,12 +108,13 @@ if __name__ == '__main__':
         j = json.loads(line)
         # insert information into the start of the json, but could be anywhere
         # CHANGE THIS LINE TO INSERT SOMETHING ELSE
-        mpd = get_mpdstatus()
-        j.insert(0, {
-            'full_text': '%s' % mpd['text'],
-            'name': 'mpd',
-            'color': mpd['color']
-        })
+        if socket.gethostname() == 'lethe':
+            mpd = get_mpdstatus()
+            j.insert(0, {
+                'full_text': '%s' % mpd['text'],
+                'name': 'mpd',
+                'color': mpd['color']
+            })
         j.insert(2, {
             'full_text': get_networkspeed(),
             'name': 'networkspeed'
