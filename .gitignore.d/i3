@@ -1,0 +1,11 @@
+*
+!/.config
+!/.config/i3
+!/.config/i3/config
+!/.config/i3status
+!/.config/i3status/config
+!/.config/i3status/measure-net-speed.bash
+!/.config/i3status/wrapper.py
+!/.config/i3/wallpaper.png
+!/.gitignore.d
+!/.gitignore.d/i3
