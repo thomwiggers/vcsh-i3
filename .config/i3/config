@@ -239,3 +239,6 @@ exec --no-startup-id nm-applet
 # Window control
 for_window [class="Corebird" instance="corebird"] floating enable, border normal
 for_window [class="Wine" instance="game.exe"] floating enable
+
+# Start owncloud
+exec --no-startup-id owncloud &
