@@ -157,8 +157,11 @@ bar {
     #tray_output LVDS1
 }
 
+# Detect screen setup
+exec --no-startup-id autorandr -c
+
 # Wallpaper
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id sleep 10 && nitrogen --restore
 
 # Locker
 set $Locker i3lock -i /home/thom/.config/i3/wallpaper.png -t -e
